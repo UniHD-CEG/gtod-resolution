@@ -45,8 +45,8 @@ int main(int argc, char** argv) {
   double mean = sum / n;
   double max = 0;
   for (int i = 0; i < n; ++i) if (diffs[i] > max) max = diffs[i];
-  printf("measured - integrated: %lfus\n", total - sum);
-  printf("mean: %lfus\n", mean);
-  printf("max: %lfus\n", max);
+  printf("error: %lfus\n", total - sum);
+  printf("mean:  %lfus\n", mean);
+  printf("max:   %lfus\n", max);
   free(diffs);
 }
